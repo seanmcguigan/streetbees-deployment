@@ -9,7 +9,7 @@ metadata:
     fluxcd.io/tag.chart-image: glob:dev-*
 spec:
   chart:
-    git: git@github.com/seanmcguigan/streetbees-deployment
+    git: ssh://git@github.com/seanmcguigan/streetbees-deployment
     ref: development
     path: charts/streetbees_cats
   releaseName: streetbees-cats

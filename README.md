@@ -7,7 +7,7 @@ helm repo add fluxcd https://charts.fluxcd.io
 kubectl create ns flux
 
 helm upgrade -i flux fluxcd/flux \
-   --set git-url=git@github.com:seanmcguigan/streetbees-deployment \
+   --set git.url=git@github.com:seanmcguigan/streetbees-deployment \
    --set git.branch=development \
    --set git.path=development \
    --namespace flux
@@ -19,7 +19,7 @@ helm upgrade -i helm-operator fluxcd/helm-operator --wait \
 --set git.ssh.secretName=flux-git-deploy \
 --set helm.versions=v3
 
-fluxctl identity --k8s-fwd-ns fluxcd
+fluxctl identity --k8s-fwd-ns flux
 
 fluxctl sync --k8s-fwd-ns flux
 
