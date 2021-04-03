@@ -9,16 +9,16 @@ metadata:
     fluxcd.io/tag.chart-image: glob:dev-*
 spec:
   chart:
-    git: ssh://git@github.com/seanmcguigan/streetbees-deployment
+    git: git@github.com/seanmcguigan/streetbees-deployment
     ref: development
     path: charts/streetbees_cats
-  releaseName: streetbees_cats
+  releaseName: streetbees-cats
   values:
     # Default values for street_bees_cats.
     # This is a YAML-formatted file.
     # Declare variables to be passed into your templates.
 
-    replicaCount: 1
+    replicaCount: 4
 
     image:
       repository: seanmcguigan/cats 
