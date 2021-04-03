@@ -18,6 +18,11 @@ helm upgrade -i helm-operator fluxcd/helm-operator --wait \
 --namespace flux \
 --set git.ssh.secretName=flux-git-deploy \
 --set helm.versions=v3
+
+fluxctl identity --k8s-fwd-ns fluxcd
+
+fluxctl sync --k8s-fwd-ns flux
+
 ```
 
 
