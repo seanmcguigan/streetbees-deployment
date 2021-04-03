@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "street_bees_cats.fullname" . }}
+  name: {{ include "streetbees-cats.fullname" . }}
   labels:
-    {{- include "street_bees_cats.labels" . | nindent 4 }}
+    {{- include "streetbees-cats.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "street_bees_cats.selectorLabels" . | nindent 6 }}
+      {{- include "streetbees-cats.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        {{- include "street_bees_cats.selectorLabels" . | nindent 8 }}
+        {{- include "streetbees-cats.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "street_bees_cats.serviceAccountName" . }}
+      serviceAccountName: {{ include "streetbees-cats.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

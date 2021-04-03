@@ -14,11 +14,7 @@ spec:
     path: charts/streetbees_cats
   releaseName: streetbees-cats
   values:
-    # Default values for street_bees_cats.
-    # This is a YAML-formatted file.
-    # Declare variables to be passed into your templates.
-
-    replicaCount: 4
+    replicaCount: 3
 
     image:
       repository: seanmcguigan/cats 

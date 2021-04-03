@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "street_bees_cats.fullname" . }}
+  name: {{ include "streetbees-cats.fullname" . }}
   labels:
-    {{- include "street_bees_cats.labels" . | nindent 4 }}
+    {{- include "streetbees-cats.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "street_bees_cats.selectorLabels" . | nindent 4 }}
+    {{- include "streetbees-cats.selectorLabels" . | nindent 4 }}

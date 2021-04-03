@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "street_bees_cats.fullname" . }}
+  name: {{ include "streetbees-cats.fullname" . }}
   labels:
-    {{- include "street_bees_cats.labels" . | nindent 4 }}
+    {{- include "streetbees-cats.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "street_bees_cats.fullname" . }}
+    name: {{ include "streetbees-cats.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
