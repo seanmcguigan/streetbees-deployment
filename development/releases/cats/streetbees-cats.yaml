@@ -10,7 +10,7 @@ metadata:
 spec:
   chart:
     git: ssh://git@github.com/seanmcguigan/streetbees-deployment
-    ref: develop
+    ref: development
     path: charts/streetbees_cats
   releaseName: streetbees_cats
   values:
