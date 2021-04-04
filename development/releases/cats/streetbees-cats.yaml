@@ -90,4 +90,7 @@ spec:
 
     affinity: {}
 
+    env:
+      RACK_ENV: development
+
 
