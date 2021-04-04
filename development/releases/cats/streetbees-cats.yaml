@@ -6,7 +6,7 @@ metadata:
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.chart-image: glob:dev-*
+    fluxcd.io/tag.chart-image: semver:~v2
 spec:
   chart:
     git: ssh://git@github.com/seanmcguigan/streetbees-deployment
@@ -20,7 +20,7 @@ spec:
       repository: seanmcguigan/cats 
       pullPolicy: IfNotPresent
       # Overrides the image tag whose default is the chart appVersion.
-      tag: "dev-v2.0.3-11"
+      tag: "v2.0.3"
 
     imagePullSecrets: []
     nameOverride: ""
