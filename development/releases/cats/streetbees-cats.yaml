@@ -59,7 +59,7 @@ spec:
         kubernetes.io/tls-acme: "false"
       hosts:
         - host: streetbees.com
-          paths: ["/cats"]
+          paths: ["/"]
       tls: []
       #  - secretName: chart-example-tls
       #    hosts:
