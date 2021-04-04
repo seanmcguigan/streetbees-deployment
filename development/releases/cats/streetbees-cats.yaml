@@ -14,7 +14,7 @@ spec:
     path: charts/streetbees_cats
   releaseName: streetbees-cats
   values:
-    replicaCount: 3
+    replicaCount: 4
 
     image:
       repository: seanmcguigan/cats 
