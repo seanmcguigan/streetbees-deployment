@@ -1,5 +1,5 @@
 module "eks-vpc" {
-  source                         = "git::git@github.com:terraform-aws-modules/terraform-aws-vpc.git?ref=v2.77.0"
+  source                         = "github.com/terraform-aws-modules/terraform-aws-vpc.git?ref=v2.77.0"
   name                           = "k8s-development"
   cidr                           = "10.0.0.0/22"
   azs                            = ["us-east-1b", "us-east-1a"]
