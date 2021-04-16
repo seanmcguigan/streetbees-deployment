@@ -9,7 +9,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  PATH: 'terraform/development/eks_vpc'
+  PATH: ./terraform/development/eks_vpc
 
 jobs:
   terraform:
@@ -40,8 +40,8 @@ jobs:
     - name: Terraform Format
       run: cd terraform/development/eks_vpc && terraform fmt -check
 
-    # Terraform plan
-    - name: terraform plan v2
+    # Terraform plan - deploying with dflook
+    - name: Terraform plan
       uses: dflook/terraform-plan@v1
       with:
         path: ${{ env.PATH }}
