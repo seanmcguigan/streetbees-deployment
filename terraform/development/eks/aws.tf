@@ -8,7 +8,7 @@ terraform {
     bucket         = "streetbees-terraformstate-development"
     encrypt        = "true"
     dynamodb_table = "terraformstate-locking-development"
-    kms_key_id     = "arn:aws:kms:us-east-1:005846173450:key/1ffef6d4-e817-48ba-9544-7c5a4c64fb63"
+    kms_key_id     = "arn:aws:kms:us-east-1:994625319258:key/63b9ea8d-917c-46ed-aa92-5bc1bf198420"
     region         = "us-east-1"
     key            = "eks-development/terraform.tfstate"
   }
